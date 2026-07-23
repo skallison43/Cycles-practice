@@ -45,6 +45,7 @@ public class BreakContinueTask {
             }else if (number == 0) {
                 break;
             }
+            System.out.println(number);
         }
     }
     public static void printCommand(){
