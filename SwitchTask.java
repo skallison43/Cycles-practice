@@ -119,18 +119,18 @@ public class SwitchTask {
         }
         System.out.println(message);
     }
-    public static void calculator() {
+    public static void calculator(){
         Scanner scanner = new Scanner(System.in);
         double x;
         double y;
         String operator;
-        double result = 0;
         System.out.print("Введите первое число: ");
         x = scanner.nextDouble();
         System.out.print("Введите второе число: ");
         y = scanner.nextDouble();
-        System.out.print("Введите один из операторов: +, -, *, / ");
+        System.out.print("Введите один из операторов: +, -, /, * ");
         operator = scanner.next();
+        double result = 0;
         switch (operator) {
             case "+":
                 result = x + y;
@@ -142,14 +142,16 @@ public class SwitchTask {
                 result = x * y;
                 break;
             case "/":
-                if (y == 0) {
+                if (y == 0){
                     System.out.println("Выполнение операции невозможно, деление на 0 запрещено");
                     return;
-                }
-                else {
+                } else {
                     result = x / y;
                     break;
                 }
+            default:
+                System.out.println("Вы выбрали некорректный оператор");
+                return;
         }
         System.out.println(result);
     }
